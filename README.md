@@ -27,7 +27,11 @@ IGR Data entry Bot - Step-by-Step Setup Guide
 - Save it as "igro_bot.py" in your "IGR Bot - EC" folder
 - Make sure the file extension is .py (not .txt)
 
-### 2.3 Prepare Your Excel File
+### 2.3 Copy the chrome file
+- Navigate to folder "C:\Program Files\Google\Chrome"
+- Copy the chrome file to "IGR Bot - EC" folder in the desktop
+
+### 2.4 Prepare Your Excel File
 - Create an Excel file named "data.xlsx" in the same folder
 - The Excel file should have 3 columns with these EXACT headers:
   Column A: Khata
