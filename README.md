@@ -1,33 +1,33 @@
-### IGR-Orissa-Data-Entry-Bot
+# IGR-Orissa-Data-Entry-Bot
 This bot automatically fills property data (Khata Number, Plot Number, Area) on the Odisha government's IGR website from an Excel file. It saves hours of manual data entry work.
 
 IGR Data entry Bot - Step-by-Step Setup Guide
 
 ## STEP 1: Install Required Software
 
-# 1.1 Install Python
+### 1.1 Install Python
 - Go to https://www.python.org/downloads/
 - Download Python (latest version)
 - During installation, CHECK the box "Add Python to PATH"
 - Click "Install Now"
 - Restart your computer after installation
 
-# 1.2 Install Google Chrome Browser
+### 1.2 Install Google Chrome Browser
 - Download and install Chrome from https://www.google.com/chrome/
 - Make sure Chrome is updated to the latest version
 
 ## STEP 2: Prepare Your Files
 
-# 2.1 Create a New Folder
+### 2.1 Create a New Folder
 - Create a new folder on your Desktop (example: "IGR Bot - EC")
 - This folder will contain all your files
 
-# 2.2 Save the Bot Code
+### 2.2 Save the Bot Code
 - Copy the igro_bot.py code into a text file
 - Save it as "igro_bot.py" in your "IGR Bot - EC" folder
 - Make sure the file extension is .py (not .txt)
 
-# 2.3 Prepare Your Excel File
+### 2.3 Prepare Your Excel File
 - Create an Excel file named "data.xlsx" in the same folder
 - The Excel file should have 3 columns with these EXACT headers:
   Column A: Khata
@@ -40,7 +40,7 @@ Khata       Plot    Area
 124/457     790     0.30
 125/458     791     0.20
 
-# Important Notes about Excel Data:
+## Important Notes about Excel Data:
 - Only numbers, slash (/) and dash (-) are allowed in Khata and Plot fields
 - Only numbers and decimal points (.) are allowed in Area field
 - If any field is blank, the bot will use the previous row's value for that field
@@ -48,18 +48,18 @@ Khata       Plot    Area
 
 ## STEP 3: Install Required Python Packages
 
-# 3.1 Open Command Prompt
+### 3.1 Open Command Prompt
 - Press Windows Key + R
 - Type "cmd" and press Enter
 - A black window (Command Prompt) will open
 
-# 3.2 Navigate to Your Folder
+### 3.2 Navigate to Your Folder
 - In the command prompt, type:
   cd "C:\Users\abhis\OneDrive\Desktop\IGR Bot - EC"
 - Press Enter
 - (Replace with your actual folder path if different)
 
-# 3.3 Install Packages
+### 3.3 Install Packages
 - Copy and paste this command in the command prompt:
   pip install pandas selenium webdriver-manager
 - Press Enter
@@ -67,7 +67,7 @@ Khata       Plot    Area
 
 ## STEP 4: Running the Bot with Chrome Debugging
 
-# 4.1 Start Chrome with Debugging Port
+### 4.1 Start Chrome with Debugging Port
 - IMPORTANT: Close all Chrome windows first
 - Open Command Prompt (Windows Key + R, type "cmd", press Enter)
 - Type this command and press Enter:
@@ -75,7 +75,7 @@ Khata       Plot    Area
 - Chrome will open in debugging mode
 - Keep this Command Prompt window open
 
-# 4.2 Manual Login Process
+### 4.2 Manual Login Process
 - In the Chrome window that opened, navigate to https://www.igrodisha.gov.in/
 - Login manually with your credentials:
   1. Enter your ID and password
@@ -84,7 +84,7 @@ Khata       Plot    Area
   4. Reach the page where you enter Khata/Plot/Area details
 - Keep Chrome open and stay on this page
 
-# 4.3 Start the Bot
+### 4.3 Start the Bot
 - Open a NEW Command Prompt window (keep the first one open)
 - Navigate to your bot folder:
   cd "C:\Users\abhis\OneDrive\Desktop\IGR Bot - EC"
@@ -93,14 +93,14 @@ Khata       Plot    Area
 - When prompted, choose option 2 (Use existing browser)
 - Press ENTER when you see: "Press ENTER when you're ready to start data entry..."
 
-# 4.4 Monitor Progress
+### 4.4 Monitor Progress
 - The bot will show progress messages like:
   "Processing record 1: Khata=123/456, Plot=789, Area=0.25"
   "✓ Successfully added record 1"
 - Let the bot complete all records
 - DO NOT close any windows during processing
 
-# 4.5 Processing Multiple Files (Rerun Without Login)
+### 4.5 Processing Multiple Files (Rerun Without Login)
 - After the first run completes, you can process more data without logging in again:
   1. Update your "data.xlsx" file with new data
   2. Run the bot again: python igro_bot.py
@@ -108,7 +108,7 @@ Khata       Plot    Area
   4. No need to login again - Chrome stays logged in!
 
 N.B. - By default, the delay timer is set to 1 second. You can change it in the "igro_bot.py" file by searching for the following and changing it:
-# ✅ Force a small delay after clicking
+### ✅ Force a small delay after clicking
 time.sleep(1)
 
 ## STEP 5: What to Expect
